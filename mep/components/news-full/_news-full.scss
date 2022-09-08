@@ -1,0 +1,155 @@
+.news-full__heading-content {
+  @include full-bleed;
+
+  background-color: clr(blue-light);
+  padding: $space-24 0;
+
+  @include medium {
+    padding: $space-32 0;
+  }
+}
+
+.news-full__heading-wrapper {
+  @include wrapper;
+}
+
+.news-full__date {
+  margin-bottom: px2rem(12);
+  color: clr(white);
+  font-size: px2rem(14);
+}
+
+.news-full__heading {
+  @include heading-lg;
+
+  margin: 0;
+  color: clr(white);
+}
+
+.news-full__image {
+  margin-bottom: $space-24;
+  max-width: 100%;
+
+  @include medium {
+    @include width-limit;
+  }
+}
+
+.news-full__content {
+    @include full-bleed;
+
+    padding: $space-24 0;
+    background-color: $gray-lightest;
+
+    @include medium {
+      padding: $space-40 0;
+    }
+}
+
+.news-full__content-wrapper {
+    @include wrapper;
+}
+
+.news-full__description {
+  max-width: 100%;
+  margin-bottom: $space-24;
+
+  @include medium {
+    @include width-limit;
+  }
+}
+
+.news-full__author {
+  font-style: italic;
+  margin: 0;
+  margin-bottom: $space-24;
+}
+
+//This is for limiting the width of multimedia content
+.news-full__multimedia-content {
+
+  @include medium {
+    @include width-limit;
+  }
+}
+
+.news-full__media {
+
+  .multimedia {
+    margin-top: $space-40;
+    margin-bottom: $space-40;
+  }
+
+  .multimedia__heading {
+    @include heading-md;
+
+    margin-top: 0;
+    margin-bottom: $space-24;
+  }
+
+  .media-card__items {
+    margin-bottom: $space-40;
+
+    @include medium {
+      padding-right: $space;
+    }
+  }
+}
+
+
+.news-full__video {
+  margin-top: $space-40;
+  margin-bottom: $space-40;
+}
+
+.news-full__gallery {
+  margin-top: $space-40;
+  margin-bottom: $space-40;
+
+  .gallery__heading {
+    text-align: start;
+    font-size: px2rem(24);
+    margin-bottom: $space-24;
+  }
+}
+
+.news-full__category {
+  border-top: px2rem(2) solid clr(blue-lighter);
+  margin-top: $space-40;
+}
+
+.news-full__keywords {
+  border-bottom: px2rem(2) solid clr(blue-lighter);
+  padding-top: $space-24;
+  padding-bottom: $space-24;
+}
+
+.news-full__all-news-wrapper {
+  margin-top: $space-56;
+
+  .news-list {
+    .item-list {
+      ul {
+        @include list-reset;
+
+        padding: 0;
+      }
+    }
+  }
+
+  @include medium {
+    margin-top: px2rem(90);
+  }
+}
+
+// Style for gray background
+.news-full__wrapper {
+  @include full-bleed();
+
+  background-color: clr(gray-lightest);
+  padding-bottom: $space-32;
+}
+
+.news-full {
+  @include wrapper();
+}

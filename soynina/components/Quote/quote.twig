@@ -1,0 +1,23 @@
+{% set quote__base_class = 'quote' %}
+
+{# Quote #}
+<div {{ bem(quote__base_class) }}>
+  {# Icon #}
+  {% include "@atoms/images/icons/_icon.twig" with {
+    icon_base_class: "icon",
+    icon_blockname: quote_base_class,
+    icon_name: 'quote-vector',
+  } %}
+  {# Text #}
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% if quote__heading %}
+    {% include "@atoms/text/headings/_heading.twig" with {
+      heading_base_class: 'heading',
+      heading_blockname: quote__base_class,
+      heading_level: quote__heading_tag,
+      heading: quote__heading,
+    } %}
+  {% endif %}
+</div>
+

@@ -1,0 +1,52 @@
+query ($path: String!) {
+  route(path: $path) {
+    title
+    url
+    metatags
+    ... on NodeInternship {
+      description
+      summary
+      areas {
+        id
+        label
+      }
+      language {
+        id
+        label
+      }
+      career {
+        id
+        label
+      }
+      careerPercentage
+      durationTotal
+      location {
+        id
+        label
+      }
+      callEndDate
+      requirement
+      otherDetail
+      testimonial {
+        image {
+          fileURL
+        }
+        testimonial
+      }
+      spacesAvailable
+      internsApplied
+      internsInvited
+      company {
+        name
+        nameCompany
+        logo {
+          id
+          fileURL
+          label
+        }
+        description
+        url
+      }
+    }
+  }
+}

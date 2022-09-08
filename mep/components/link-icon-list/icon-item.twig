@@ -1,0 +1,29 @@
+{#
+/**
+ * Available variables:
+ * - icon_list__links_icon - array of links with icon properties(text, url, icon_src).
+#}
+
+{% set icon_list__base_class = 'icon-list' %}
+
+<li {{ bem('list-item', [], icon_list__base_class) }}>
+    {% if icon__url %}
+      <a {{ bem('icon-link', [], icon_list__base_class) }} href={{ icon__url }}>
+    {% endif %}
+      <div {{ bem('icon-link-image', [], icon_list__base_class) }}>
+        {% block image %}
+          {% include "@atoms/images/image/responsive-image.twig" with {
+            image_src: icon__icon_src,
+            output_image_tag: true,
+            image_alt: icon__text,
+            responsive_image_blockname: 'icon-list',
+          } %}
+        {% endblock %}
+      </div>
+      <div {{ bem('text', [], icon_list__base_class) }}>
+        {{ icon__text }}
+      </div>
+    {% if icon__url %}
+      </a>
+    {% endif %}
+</li>

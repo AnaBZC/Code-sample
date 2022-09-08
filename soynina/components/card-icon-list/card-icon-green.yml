@@ -1,0 +1,41 @@
+card_icon_list__heading_element: 'h2'
+card_icon_list__heading: '¿Cuál es la situación de las niñas en Costa Rica?'
+card_icon_list__modifiers:
+  - 'green'
+card_icon_list__cards:
+  - card__icon_src: 'https://via.placeholder.com/50x40'
+    card__icon_alt: "This is the card icon's alt text"
+    card__has_icon: true
+    card__heading: 'Nacimientos'
+    card__heading_level: 'h3'
+    card__body: '<p>En el 2019 se registraron 8,041 nacimientos en niñas y adolescentes menores de 19 años.</p>'
+    card__has_buttons: true
+    card__modifiers:
+      - 'icon-top'
+  - card__icon_src: 'https://via.placeholder.com/50x40'
+    card__icon_alt: "This is the card icon's alt text"
+    card__has_icon: true
+    card__heading: 'Embarazo'
+    card__heading_level: 'h3'
+    card__body: '<p>Cinco niñas menores de 14 años y 21 adolescentes entre 15 y 19 años se convierten en madres cada semana.</p>'
+    card__has_buttons: true
+    card__modifiers:
+      - 'icon-top'
+  - card__icon_src: 'https://via.placeholder.com/50x40'
+    card__icon_alt: "This is the card icon's alt text"
+    card__has_icon: true
+    card__heading: 'Relaciones impropias'
+    card__heading_level: 'h3'
+    card__body: '<p>La Fiscalía General de la República recibió en tres años 13,500 denuncias por relaciones impropias.</p>'
+    card__has_buttons: true
+    card__modifiers:
+      - 'icon-top'
+  - card__icon_src: 'https://via.placeholder.com/50x40'
+    card__icon_alt: "This is the card icon's alt text"
+    card__has_icon: true
+    card__heading: 'Desamparados y la Unión'
+    card__heading_level: 'h3'
+    card__body: '<p>Trabajmos en Desamparados y la Unión, estos cantones tienen un alto porcentaje de madres adolescentes.</p>'
+    card__has_buttons: true
+    card__modifiers:
+      - 'icon-top'

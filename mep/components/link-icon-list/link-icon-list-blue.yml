@@ -1,0 +1,5 @@
+icon_list__modifiers:
+  - 'blue'
+icon_list__has_image: true
+icon_list__image_src: 'https://placeimg.com/720/720/nature'
+icon_list__image_alt: "This is the card image's alt text"

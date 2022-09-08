@@ -1,0 +1,43 @@
+news_full__title: 'MEP presenta Plan Integral de Nivelación Académica'
+news_full__level: 'h2'
+news_full__date: '06 de noviembre 2020'
+news_full__has_image: true
+news_full__image:
+  src: 'https://placeimg.com/715/395/nature'
+  alt: 'This is the card images alt text'
+news_full__description: 'El Ministerio de Educación Pública (MEP) dio a conocer el “Plan Integral de Nivelación Académica” que marcará la ruta a la comunidad educativa nacional, para nivelar los aprendizajes en las personas estudiantes y solventar los vacíos académicos generados por las interrupciones en los cursos lectivos de los últimos tiempos, a raíz de huelgas y la crisis mundial de salud generada por la COVID-19.'
+news_full__category: 'Tecnología'
+news_full__author: 'esteban.naranjo.navarro@mep.go.cr'
+news__has_gallery: true
+news_full__gallery:
+  - image_src: 'https://placeimg.com/480/300/any'
+    image_alt: "This is the card image's alt text"
+  - image_src: 'https://placeimg.com/480/300/any'
+    image_alt: "This is the card image's alt text"
+  - image_src: 'https://placeimg.com/480/300/any'
+    image_alt: "This is the card image's alt text"
+  - image_src: 'https://placeimg.com/480/300/any'
+    image_alt: "This is the card image's alt text"
+  - image_src: 'https://placeimg.com/480/300/any'
+    image_alt: "This is the card image's alt text"
+  - image_src: 'https://placeimg.com/480/300/any'
+    image_alt: "This is the card image's alt text"
+  - image_src: 'https://placeimg.com/480/300/any'
+    image_alt: "This is the card image's alt text"
+  - image_src: 'https://placeimg.com/480/300/any'
+    image_alt: "This is the card image's alt text"
+  - image_src: 'https://placeimg.com/480/300/any'
+    image_alt: "This is the card image's alt text"
+  - image_src: 'https://placeimg.com/480/300/any'
+    image_alt: "This is the card image's alt text"
+  - image_src: 'https://placeimg.com/480/300/any'
+    image_alt: "This is the card image's alt text"
+  - image_src: 'https://placeimg.com/480/300/any'
+    image_alt: "This is the card image's alt text"
+news_full__keywords:
+  - keyword__text: 'Innovación'
+    keyword__url: 'https://github.com/emulsify-ds/emulsify-design-system'
+  - keyword__text: 'Estudiantes'
+    keyword__url: 'https://github.com/emulsify-ds/emulsify-design-system'
+  - keyword__text: 'Docentes'
+    keyword__url: 'https://github.com/emulsify-ds/emulsify-design-system'

@@ -1,0 +1,42 @@
+card_icon_list__heading_element: 'h2'
+card_icon_list__heading: 'Según varias evaluaciones anuales y encuestas con  las niñas y sus familiares:'
+card_icon_list__modifiers:
+  - 'color'
+card_icon_list__cards:
+  - card__icon_src: 'https://via.placeholder.com/50x40'
+    card__icon_alt: "This is the card icon's alt text"
+    card__has_icon: true
+    card__heading: 'Cambios positivos'
+    card__heading_level: 'h3'
+    card__body: '<p>El 97% de familiares entrevistados declaró que notó cambios positivos notorios en su hija a partir de la asistencia al Club en el 2018.</p>'
+    card__has_buttons: true
+    card__modifiers:
+      - 'color'
+  - card__icon_src: 'https://via.placeholder.com/50x40'
+    card__icon_alt: "This is the card icon's alt text"
+    card__has_icon: true
+    card__heading: 'Seguridad en sí mismas'
+    card__heading_level: 'h3'
+    card__body: '<p>El 82% expresó que notan a las niñas más seguras de sí mismas.</p>'
+    card__has_buttons: true
+    card__modifiers:
+      - 'color'
+  - card__icon_src: 'https://via.placeholder.com/50x40'
+    card__icon_alt: "This is the card icon's alt text"
+    card__has_icon: true
+    card__heading: 'Rendimiento académico'
+    card__heading_level: 'h3'
+    card__body: '<p>El 76% expresó que sus hijas mejoraron su rendimiento académico.</p>'
+    card__has_buttons: true
+    card__modifiers:
+      - 'color'
+  - card__icon_src: 'https://via.placeholder.com/50x40'
+    card__icon_alt: "This is the card icon's alt text"
+    card__has_icon: true
+    card__heading: 'Relación con el entorno'
+    card__heading_level: 'h3'
+    card__body: '<p>El 73% expresó que sus hijas mejoraron su relación con su entorno familiar.</p>'
+    card__has_buttons: true
+    card__modifiers:
+      - 'color'
+

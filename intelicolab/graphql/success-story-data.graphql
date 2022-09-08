@@ -1,0 +1,27 @@
+query($path: String!) {
+  route(path: $path) {
+    ... on NodeSuccessStory {
+      title
+      metatags
+      image {
+        alt
+        width
+        height
+        imageURL
+      }
+      body
+      services {
+        id
+        title
+        icon {
+          alt
+          width
+          height
+          imageURL
+        }
+        url
+      }
+      url
+    }
+  }
+}

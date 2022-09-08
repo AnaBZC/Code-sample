@@ -1,0 +1,132 @@
+.global-search {
+  display: flex;
+  flex-direction: column;
+
+  @include large {
+    flex-direction: row;
+  }
+
+  // Modifications of styles
+
+  // Card left
+  .card--left {
+    box-shadow: none;
+
+    .card__content {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    .card__subheading {
+      font-size: px2rem(12);
+    }
+
+    .card__buttons {
+      display: flex;
+      justify-content: flex-end;
+
+      .button--link {
+        background-color: clr(blue-light);
+        color: clr(white);
+
+        .button__icon {
+          fill: clr(white);
+          stroke: clr(white);
+        }
+
+        &:hover {
+          border: px2rem(2) solid clr(blue-light);
+        }
+      }
+    }
+  }
+
+  // Buttons
+  .document-card__buttons,
+  .card-office-block__buttons {
+    display: flex;
+    justify-content: flex-end;
+
+    .button--link {
+      border: px2rem(2) solid clr(blue-light);
+      background-color: clr(blue-light);
+      color: clr(white);
+      padding: px2rem(10) $space;
+
+      .button__icon {
+        fill: clr(white);
+        stroke: clr(white);
+      }
+    }
+  }
+
+  // Subheading
+  .card-office-block__category {
+    font-size: px2rem(12);
+  }
+
+  // Audio Card
+  .audio_content__type {
+    font-size: px2rem(12);
+    color: clr(turquoise-dark);
+    margin: 0;
+    margin-bottom: $space-8;
+  }
+
+  // Faq
+
+  .accordion-faq__header-button {
+    cursor: initial;
+  }
+
+  .audio-card__wrapper {
+
+    .audio-card__buttons {
+      justify-content: space-between;
+    }
+  }
+}
+
+.global-search__search-filters {
+  @include large {
+    flex: 1 0 30%;
+    margin-right: $space-48;
+  }
+
+}
+
+.global-search__result-wrapper {
+  flex-basis: 70%;
+}
+
+.global-search__header,
+.global-search__footer {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: px2rem(22);
+    margin-top: 0;
+    margin-bottom: $space;
+  }
+}
+
+.global-search__result-content {
+  padding: $space-24;
+  background-color: clr(white);
+  border-radius: px2rem(15);
+  box-shadow: 0 px2rem(5) px2rem(3) px2rem(2) rgba(0, 0, 0, 0.3);
+}
+
+.global-search__items {
+  @include list-reset;
+}
+
+.global-search__item {
+  padding-bottom: $space-24;
+  border-bottom: 1px solid clr(blue-lighter);
+  margin-bottom: $space-24;
+}
+

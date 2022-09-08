@@ -1,0 +1,74 @@
+query ($path: String!) {
+  route(path: $path) {
+    ... on NodeService {
+      title
+      metatags
+      icon {
+        alt
+        width
+        height
+        imageURL
+      }
+      valueProposal {
+        title
+        image {
+          alt
+          width
+          height
+          imageURL
+        }
+        description
+      }
+      image {
+        alt
+        width
+        height
+        imageURL
+      }
+      body
+      serviceCharacteristics {
+        title
+        characteristics
+      }
+      usedTechnology {
+        title
+        informationColumn1
+        informationColumn2
+      }
+      serviceConsumers {
+        title
+        characteristics
+      }
+      contactMessage
+      listLinks {
+        text
+        cta {
+          id
+          ... on ParagraphLinkNoText {
+            linkURL
+          }
+          ... on ParagraphFile {
+            file {
+              label
+              fileURL
+              description
+            }
+          }
+        }
+      }
+      successStories {
+        id
+        title
+        image {
+          alt
+          width
+          height
+          imageURL
+        }
+        summary
+        url
+      }
+      url
+    }
+  }
+}

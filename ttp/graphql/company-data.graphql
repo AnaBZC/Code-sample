@@ -1,0 +1,40 @@
+query ($path: String!) {
+  routeUser(path: $path) {
+    name
+    metatags
+    url
+    ... on UserCompany {
+      nameCompany
+      description
+      divisions
+      employeeRange {
+        label
+      }
+      logo {
+        fileURL
+      }
+      photo {
+        fileURL
+      }
+      location {
+        taxonomyTerms {
+          label
+          children {
+            label
+          }
+        }
+      }
+      internships {
+        id
+        title
+        url
+        summary
+        location {
+          id
+          label
+        }
+        durationTotal
+      }
+    }
+  }
+}

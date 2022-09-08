@@ -1,0 +1,41 @@
+{% set card_icon_list__base_class = 'card-icon-list' %}
+
+<div {{ bem(card_icon_list__base_class, card_icon_list__modifiers) }} {{ attributes }}>
+	<div {{ bem('wrapper', [], card_icon_list__base_class) }}>
+		<div {{ bem('container', [], card_icon_list__base_class) }}>
+			{{ title_prefix }}
+			{{ title_suffix }}
+			{# Heading #}
+			{% include '@atoms/text/headings/_heading.twig' with {
+        heading_base_class: 'heading',
+        heading: card_icon_list__heading,
+        heading_blockname: card_icon_list__base_class,
+        heading_level: card_icon_list__heading_element,
+      } %}
+			{# Cards #}
+			<ul {{ bem('cards', [], card_icon_list__base_class) }}>
+				{% block card_list__cards %}
+					{% for card in card_icon_list__cards %}
+						<li>{% include '@molecules/card/card.twig' with card %}</li>
+					{% endfor %}
+				{% endblock %}
+			</ul>
+			{% if card_icon_list__has_buttons %}
+				<div {{ bem('button-container', card_icon_list__modifiers, card_icon_list__base_class) }}>
+					{% block card_icon_list__buttons %}
+						{% for button in card_icon_list__buttons_list %}
+							{# Buttons #}
+							{% include "@atoms/buttons/twig/button.twig" with {
+								button_icon: 'check-vector',
+                button_content: button.content,
+                button_url: button.url,
+                button_modifiers: button.modifiers,
+                button_type: 'link',
+              } %}
+						{% endfor %}
+					{% endblock %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</div>

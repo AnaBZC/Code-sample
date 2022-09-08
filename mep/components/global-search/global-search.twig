@@ -1,0 +1,47 @@
+{#
+  # Available variables:
+  # - global_search__base_class - base classname of the wrapper.
+  # - global_search__modifiers - modifiers.
+  # - global_search__extra_class - modifiers.
+  # - global_search__heading - the content of the heading.
+  # - global_search__heading_level - the heading level (h1, h2, h3).
+  # - global_search__description - the content of the description.
+#}
+
+{% set global_search__base_class = 'global-search' %}
+
+<div {{ bem(global_search__base_class, global_search__modifiers, [], global_search__extra_class) }} {{ attributes }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% block global_search_exposed_filters %}
+    <div {{ bem('search-filters', [], global_search__base_class, ['vertical-exposed-filters']) }}>
+      <div {{bem('header', [], global_search__base_class) }}>
+        <h3>Filtros</h3>
+      </div>
+    </div>
+  {% endblock %}
+  {% block global_search_results %}
+    <div {{ bem('result-wrapper', [], global_search__base_class) }}>
+      <div {{ bem('header', [], global_search__base_class) }}>
+        <h3>Resultados</h3>
+      </div>
+      <div {{ bem('result-content', [], global_search__base_class) }}>
+
+        <ul {{bem('items', [], global_search__base_class)}}>
+          {% for item in global_search_items %}
+            <li {{bem('item', [], global_search__base_class)}}>
+              {% embed "@molecules/document-card/document-card.twig" with {
+                document_card__heading: item.heading,
+                document_card__heading_level: item.heading_level,
+                document_card__description: item.description,
+                document_card__has_buttons: true,
+                document_card__buttons: item.files,
+                document_card__categories: item.categories,
+          } %}{% endembed %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  {% endblock %}
+</div>

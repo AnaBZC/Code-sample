@@ -1,0 +1,76 @@
+global_search_items:
+  - heading: 'Decreto Ejecutivo N° 41103-MEP, Reglamento de Requerimientos de Diseño Arquitectónico sobre Edificios para la Educación Pública y Privada en Costa Rica'
+    heading_level: 'h3'
+    categories:
+      - content: 'Leyes'
+      - content: 'Docentes'
+      - content: 'Alumnos'
+    description: 'El Decreto Ejecutivo N° 41103-MEP, considera los espacios mínimos así como las condiciones espaciales arquitectónicas idóneas aplicables a la infraestructura Pública y Privada, a través de lo cual se pretende un adecuado proceso de enseñanza-aprendizaje.'
+    files:
+      - content: 'Descargar'
+        icon: 'files'
+        modifiers:
+          - 'download'
+        download_options:
+          - extension: 'PDF'
+            url: 'http://example-url/test.pdf'
+          - extension: 'PPTX'
+            url: 'http://example-url/test.pptx'
+          - extension: 'XLSX'
+            url: 'http://example-url/test.xlsx'
+  - heading: 'Praeterea iter est quasdam res quas ex communi.'
+    heading_level: 'h3'
+    categories:
+      - content: 'Leyes'
+      - content: 'Docentes'
+      - content: 'Alumnos'
+    description: 'El Decreto Ejecutivo N° 41103-MEP, considera los espacios mínimos así como las condiciones espaciales arquitectónicas idóneas aplicables a la infraestructura Pública y Privada, a través de lo cual se pretende un adecuado proceso de enseñanza-aprendizaje.'
+    files:
+      - content: 'Descargar'
+        icon: 'files'
+        modifiers:
+          - 'download'
+        download_options:
+          - extension: 'PDF'
+            url: 'http://example-url/test.pdf'
+          - extension: 'PPTX'
+            url: 'http://example-url/test.pptx'
+          - extension: 'XLSX'
+            url: 'http://example-url/test.xlsx'
+  - heading: 'Magna pars studiorum, prodita quaerimus. Fabio vel iudice vincam, sunt in culpa qui officia.'
+    heading_level: 'h3'
+    categories:
+      - content: 'Leyes'
+      - content: 'Docentes'
+      - content: 'Alumnos'
+    files:
+      - content: 'Descargar'
+        icon: 'files'
+        modifiers:
+          - 'download'
+        download_options:
+          - extension: 'PDF'
+            url: 'http://example-url/test.pdf'
+          - extension: 'PPTX'
+            url: 'http://example-url/test.pptx'
+          - extension: 'XLSX'
+            url: 'http://example-url/test.xlsx'
+  - heading: 'Nihil hic munitissimus habendi senatus locus, nihil horum? Fabio vel iudice vincam, sunt in culpa qui officia.'
+    heading_level: 'h3'
+    categories:
+      - content: 'Leyes'
+      - content: 'Docentes'
+      - content: 'Alumnos'
+    description: 'El Decreto Ejecutivo N° 41103-MEP, considera los espacios mínimos así como las condiciones espaciales arquitectónicas idóneas aplicables a la infraestructura Pública y Privada, a través de lo cual se pretende un adecuado proceso de enseñanza-aprendizaje.'
+    files:
+      - content: 'Descargar'
+        icon: 'files'
+        modifiers:
+          - 'download'
+        download_options:
+          - extension: 'PDF'
+            url: 'http://example-url/test.pdf'
+          - extension: 'PPTX'
+            url: 'http://example-url/test.pptx'
+          - extension: 'XLSX'
+            url: 'http://example-url/test.xlsx'

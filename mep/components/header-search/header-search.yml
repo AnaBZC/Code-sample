@@ -1,0 +1,8 @@
+header_search__title: 'Garantizamos el derecho fundamental a una educación de calidad a los habitantes del país.'
+header_search__level: h1
+header_search_search_title: '¿Cómo podemos ayudarle?'
+header_search__has_image: true
+header_search__has_search: true
+header_search__image:
+  src: 'https://placeimg.com/1440/495/nature'
+  alt: 'This is the card images alt text'

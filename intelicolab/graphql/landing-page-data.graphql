@@ -1,0 +1,208 @@
+# TODO: Uncomment these fragments as soon as they're required.
+
+# fragment LinkFields on ParagraphLink {
+#   id
+#   linkURL
+#   linkTitle
+# }
+
+# fragment FileFields on ParagraphFile {
+#   id
+#   file {
+#     description
+#     fileURL
+#   }
+# }
+
+query LandingPage($path: String!) {
+  route(path: $path) {
+    title
+    metatags
+    ... on NodeLandingPage {
+      url
+      parentPage {
+        title
+        url
+      }
+      sections {
+        sectionId
+        variant
+        background
+        columnProportions
+        spacingTop
+        spacingBottom
+        spacingColumns
+        equalHeight
+        components {
+          uuid
+          region
+          block {
+            ... on BlockBasic {
+              body
+              title
+              headingLevel
+              image {
+                imageURL
+                alt
+                width
+                height
+              }
+              cta {
+                linkURL
+                linkTitle
+              }
+            }
+            ... on BlockFormContact {
+              title
+              headingLevel
+              description
+            }
+            ... on BlockNewsList {
+              title
+              headingLevel
+            }
+            ... on BlockHeader {
+              title
+              description
+            }
+            ... on BlockServices {
+              services {
+                title
+                icon {
+                  alt
+                  width
+                  height
+                  imageURL
+                }
+                summary
+                url
+              }
+            }
+            ... on BlockContact {
+              title
+              email
+              phoneNumber
+              texts {
+                title
+                texts
+              }
+            }
+            ... on BlockLogos {
+              title
+              logoList {
+                icon {
+                  alt
+                  width
+                  height
+                  imageURL
+                }
+                linkURL
+              }
+              link {
+                linkTitle
+                linkURL
+              }
+            }
+            ... on BlockCardImageList {
+              cardImageList {
+                image {
+                  alt
+                  imageURL
+                  width
+                  height
+                }
+                title
+                text
+                linkURL
+              }
+            }
+            ... on BlockSuccessStories {
+              successStories {
+                id
+                title
+                image {
+                  alt
+                  width
+                  height
+                  imageURL
+                }
+                summary
+                url
+              }
+            }
+            ... on BlockText {
+              title
+              text
+            }
+            ... on BlockServicesCardList {
+              title
+              services {
+                title
+                icon {
+                  alt
+                  width
+                  height
+                  imageURL
+                }
+                url
+              }
+            }
+            ... on BlockCarousel {
+              slides {
+                title
+                image {
+                  alt
+                  width
+                  height
+                  imageURL
+                }
+                description
+                cta {
+                  id
+                  ... on ParagraphLink {
+                    linkURL
+                    linkTitle
+                  }
+                  ... on ParagraphFile {
+                    file {
+                      description
+                      fileURL
+                    }
+                  }
+                }
+              }
+            }
+            ... on BlockSuccessStory {
+              successStory {
+                title
+                image {
+                  alt
+                  width
+                  height
+                  imageURL
+                }
+                summary
+                url
+              }
+            }
+            ... on BlockRelatedServices {
+              title
+              services {
+                id
+                title
+                icon {
+                  alt
+                  width
+                  height
+                  imageURL
+                }
+                url
+              }
+            }
+            # TODO: Add other block types here.
+          }
+        }
+      }
+    }
+  }
+}

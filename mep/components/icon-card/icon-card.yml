@@ -1,0 +1,17 @@
+icon_card__icon_src: 'https://via.placeholder.com/50x40'
+icon_card__icon_alt: "This is the card icon's alt text"
+icon_card__has_icon: true
+icon_card__heading: 'SERVICIOS'
+icon_card__level: 'h1'
+icon_card___heading_link: '#'
+icon_card__body: '<p>Es un programa de gran trayectoria que brinda espacios para niños, niñas y adolescentes en el área de las artes y que a través de él se busca seguir favoreciendo la identidad, convivencia y permanencia de los y las estudiantes en el Sistema Educativo.</p>'
+icon_card__has_buttons: true
+icon_card__modifiers:
+  - 'icon-left'
+  - 'pastel-purple'
+icon_card__buttons_list:
+  - content: 'Conocer más'
+    url: '#'
+    modifiers:
+      - 'outline-black'
+    icon: 'arrow'

@@ -1,0 +1,68 @@
+.quote {
+  margin: $space-64 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: - px2rem(76);
+    right: - $space-24;
+    width: px2rem(126);
+    height: px2rem(169);
+    background-repeat: no-repeat;
+    background-size: px2rem(110) px2rem(169);
+    background-image: url('../images/icons/polygon-vector.svg');
+    z-index: -1;
+
+    @include medium {
+      bottom: 0;
+      width: px2rem(174);
+      height: px2rem(169);
+      right: $space;
+      background-size: px2rem(174) px2rem(169);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: - px2rem(110);
+    width: px2rem(152);
+    height: px2rem(152);
+    background-repeat: no-repeat;
+    background-size: px2rem(152) px2rem(152);
+    background-image: url('../images/icons/circley-vector.svg');
+    z-index: -1;
+
+    @include medium {
+      left: $space;
+    }
+  }
+}
+
+.quote__heading {
+  display: flex;
+  color: clr(petrol-dark);
+  text-align: center;
+  justify-content: center;
+  margin: $space-32 $space-32 $space-64 $space-32 ;
+  line-height: px2rem(35);
+
+  @include heading-xl;
+
+  @include medium {
+    margin: $space-32 px2rem(200) $space-64 px2rem(200);
+  }
+}
+
+.quote .icon {
+  width: $space-40;
+  height: $space-32;
+  margin: 0 auto 0 auto;
+}
+

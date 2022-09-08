@@ -1,0 +1,111 @@
+{#
+/**
+ * Available variables:
+ * - news_full__base_class - base classname of the wrapper.
+ */
+#}
+
+{% set news_full__base_class = 'news-full' %}
+
+<div {{ bem('wrapper', [],news_full__base_class, news_full__modifiers) }} {{ attributes }}>
+  {{ title_prefix }}
+  <div {{ bem('heading-content', [], news_full__base_class) }}>
+    <div {{ bem('heading-wrapper', [], news_full__base_class) }}>
+      {# Date #}
+      {% if news_full__date %}
+        <div {{ bem('date', [], news_full__base_class) }}>
+          {{news_full__date}}
+        </div>
+      {% endif %}
+      {# Title #}
+      {% if news_full__title %}
+        {% include "@atoms/text/headings/_heading.twig" with {
+            heading_base_class: 'heading',
+            heading_blockname: news_full__base_class,
+            heading_level: news_full__level,
+            heading: news_full__title,
+          } %}
+      {% endif %}
+      {{ title_suffix }}
+    </div>
+  </div>
+  <div{{ bem(news_full__base_class) }}>
+    <div {{ bem('content', [], news_full__base_class) }}>
+      <div {{ bem('content-wrapper', [], news_full__base_class) }}>
+        {# Image #}
+        {% if news_full__has_image %}
+          <div {{ bem('image', [], news_full__base_class) }}>
+            {% block image %}
+              <img src="{{ news_full__image.src }}" alt="{{ news_full__image.alt }}"/>
+            {% endblock %}
+          </div>
+        {% endif %}
+        {# Description #}
+        {% if news_full__description %}
+          <div {{ bem('description', [], news_full__base_class) }}>
+            {{news_full__description}}
+          </div>
+        {% endif %}
+        {# Author #}
+        {% if news_full__author %}
+          <div {{ bem('author', [], news_full__base_class) }}>
+            <p>
+              Autor:
+              {{ news_full__author }}
+            </p>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    <div {{ bem('multimedia-content', [], news_full__base_class) }}>
+      {# Media #}
+      {% if news__has_media %}
+        <div {{ bem('media', [], news_full__base_class) }}>
+        {% block news__media %}
+        {% endblock %}
+        </div>
+      {% endif %}
+      {# Gallery #}
+      {% if news__has_gallery %}
+        <div {{ bem('gallery', [], news_full__base_class) }}>
+          {% block news_full__gallery %}
+            {% include '@organisms/gallery/gallery.twig' with {
+              gallery__has_items: true,
+              gallery__items: news_full__gallery,
+            } %}
+          {% endblock %}
+        </div>
+      {% endif %}
+      {# Video #}
+      {% if news__has_video %}
+        <div {{ bem('video', [], news_full__base_class) }}>
+          {% block news__video %}
+          {% endblock %}
+        </div>
+      {% endif %}
+    </div>
+    {# Category #}
+    {% if news_full__has_category %}
+      {% block news__categories %}
+        {% include '@molecules/keywords/keywords.twig' with {
+          keywords__label: 'Categorías',
+          items: news_full__keywords,
+        } %}
+      {% endblock %}
+    {% endif %}
+    {# Keywords #}
+    {% if news__has_keywords %}
+      {% block news_full__keywords %}
+        {% include '@molecules/keywords/keywords.twig' with {
+          items: news_full__keywords,
+          keywords__label: 'Palabras clave',
+        } %}
+      {% endblock %}
+    {% endif %}
+    {# All news #}
+    <div {{ bem('all-news-wrapper', [], news_full__base_class) }}>
+      {% block news__all_news %}
+      {% endblock %}
+    </div>
+  </div>
+</div>

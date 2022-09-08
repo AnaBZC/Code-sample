@@ -1,0 +1,50 @@
+{#
+/**
+ * Available variables:
+ * - iconList__links_icon - array of links with icon properties(text, url, icon_src).
+#}
+
+{% set icon_list__base_class = 'icon-list' %}
+{% set icon_list__modifiers = icon_list__modifiers|default([]) %}
+
+{# Icons list #}
+<div {{ bem( icon_list__base_class , icon_list__modifiers ) }} {{ attributes }}>
+  <div {{ bem('container', [], icon_list__base_class) }}>
+    {# Title #}
+    {{ title_prefix }}
+    {% if icon_list__heading %}
+      {% include "@atoms/text/headings/_heading.twig" with {
+      heading_base_class: 'heading',
+      heading_blockname: icon_list__base_class,
+      heading_level: icon_list__heading_tag,
+      heading: icon_list__heading,
+    } %}
+    {% endif %}
+    {{ title_suffix }}
+    {# Body #}
+    {% if icon_list__description %}
+      <div {{ bem('description', [], icon_list__base_class) }}>
+        {{ icon_list__description  }}
+      </div>
+    {% endif %}
+    <ul {{ bem('list', [], icon_list__base_class) }}>
+      {% block icon_list__list %}
+        {% for icon in icon_list__list %}
+          {% include "@molecules/link-icon-list/icon-item.twig" with {
+          icon__text: icon.text,
+          icon__url: icon.url,
+          icon__icon_src: icon.icon_src,
+        } %}
+        {% endfor %}
+      {% endblock %}
+    </ul>
+  </div>
+  {# Image #}
+  {% if icon_list__has_image %}
+    <div {{ bem('image', [], icon_list__base_class) }}>
+      {% block icon_list__img %}
+        <img src="{{ icon_list__image_src }}" alt="{{ icon_list__image_alt }}"/>
+      {% endblock %}
+    </div>
+  {% endif %}
+</div>

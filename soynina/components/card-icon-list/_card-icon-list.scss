@@ -1,0 +1,203 @@
+.card-icon-list__container {
+  background-color: clr(white);
+  width: 100%;
+  display: inline-block;
+}
+
+.card-icon-list__heading {
+  color: clr(petrol);
+  text-align: center;
+  margin: $space-24 0 $space-32 0;
+
+  @include heading-lg;
+
+  @include medium{
+    margin: $space-48 0 $space-32 0;
+  }
+}
+
+.card-icon-list__cards {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include medium {
+    margin: 0 0 $space-48 0;
+    padding: 0 $space-24;
+  }
+
+  li {
+    width: 100%;
+    margin: 0 $space $space-24 $space;
+
+    @include medium{
+      margin: 0 $space-8 $space-24 $space-8;
+    }
+
+    @include large {
+      flex: 1 0 48%;
+      margin: 0 $space $space-24 $space;
+    }
+
+    .card {
+      display: flex;
+      height: 100%;
+
+      .card__content {
+        display: flex;
+        flex-direction: column;
+
+        .card__heading{
+          color: clr(gray-drak);
+          font-weight: 700;
+        }
+
+        .card__body {
+          color: clr(gray-drak);
+          font-weight: 400;
+          text-align: start;
+          margin-bottom: $space-24;
+        }
+      }
+    }
+  }
+}
+
+.card-icon-list__button-container {
+  margin: $space-48 auto $space-64;
+  text-align: center;
+  max-width: 90%;
+
+  @include medium {
+    max-width: 100%;
+  }
+}
+
+//Variations
+
+//card with bg green
+.card-icon-list--green{
+  background-color: clr(green-light);
+  background-image: url('../images/icons/pattern-vector.svg');
+  background-repeat:space;
+
+    .card-icon-list__cards{
+      li{
+        .card {
+          @extend .card--icon-top;
+        }
+
+        .card .card__body{
+          text-align: center;
+        }
+
+        @include medium {
+          flex: 1 0 48%;
+          max-width: calc(25% - #{$space} * 2);
+        }
+      }
+  }
+}
+
+//card with bg mint
+.card-icon-list--turquoise{
+  .card-icon-list__container {
+  background-color: clr(turquoise-light);
+  background-image: url('../images/icons/pattern-vector.svg');
+  background-repeat:space;
+  }
+  .card-icon-list__cards{
+      li{
+        .card {
+          @extend .card--icon;
+        }
+
+        @include medium {
+        flex: 1 0 48%;
+        max-width: calc(33% - #{$space} * 2);
+      }
+    }
+  }
+}
+
+//card of colors
+.card-icon-list--color {
+  background-color: clr(white);
+  margin: $space-48 0 $space-64 0;
+
+  @include medium {
+    margin: $space-64 0 $space-40;
+  }
+
+  .card-icon-list__wrapper {
+    margin: 0 1.5rem;
+
+    @include medium {
+        margin: 0;
+      }
+  }
+
+  .card-icon-list__heading {
+    color: clr(turquoise-dark);
+    margin: 0 0 $space-24;
+    text-align: center;
+
+    @include heading-lg;
+  }
+
+  .card-icon-list__cards {
+    @include list-reset;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+
+    li {
+      margin: 0;
+      padding: 0 0 px2rem(24) 0;
+      width: 100%;
+
+      &:nth-child(1n) .card {
+      background-color: clr(turquoise-light);
+      }
+
+      &:nth-child(2n) .card{
+        background-color: clr(green-light);
+      }
+
+      &:nth-child(3n) .card {
+        background-color: clr(pink-light);
+      }
+
+      &:nth-child(4n) .card {
+        background-color: clr(yellow-light);
+      }
+
+      @include large {
+        flex: 1 0 48%;
+        max-width: calc(27% - #{$space} * 2);
+        padding: 0 px2rem(12) $space-24 px2rem(12);
+      }
+
+      .card {
+        @extend .card--color;
+
+        display: flex;
+        height: 100%;
+        flex-direction: row-reverse;
+
+        .card__content {
+          display: flex;
+          flex-direction: column;
+
+          .card__body {
+            margin-bottom: auto;
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,44 @@
+{#
+  # Available variables:
+  # - header__base_class - base classname of the wrapper.
+  # - header__image - the image info(src, alt).
+  # - header__title - the content of the heading.
+  # - header__description - the content of the header body.
+  # - header__button_1 - the button info (content, url, type).
+  # - header__button_2 - the button info (content, url, type).
+#}
+
+{% set header_search__base_class = 'header-search-component' %}
+
+<div {{ bem(header_search__base_class, header_search__modifiers) }} {{ attributes }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {# Image #}
+  {% if header_search__has_image %}
+    <div {{ bem('image', [], header_search__base_class) }}>
+      {% block image %}
+        <img src="{{ header_search__image.src }}" alt="{{ header_search__image.alt }}"/>
+      {% endblock %}
+      <div {{ bem('image-mask', [], header_search__base_class) }}></div>
+    </div>
+  {% endif %}
+  <div {{ bem('container', [], header_search__base_class) }}>
+    {% if header_search__title %}
+      {% include "@atoms/text/headings/_heading.twig" with {
+          heading_base_class: 'heading',
+          heading_blockname: header_search__base_class,
+          heading_level: header_search__level,
+          heading: header_search__title,
+        } %}
+    {% endif %}
+    {% if header_search__has_search %}
+      {% include "@atoms/text/headings/_heading.twig" with {
+          heading_base_class: 'search-heading',
+          heading_blockname: header_search__base_class,
+          heading_level: 'h4',
+          heading: header_search_search_title,
+        } %}
+      {% block header_search %}{% endblock %}
+    {% endif %}
+  </div>
+</div>
